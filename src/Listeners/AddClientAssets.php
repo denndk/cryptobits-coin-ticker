@@ -1,21 +1,24 @@
 <?php
 namespace Cryptobits\CoinTicker\Listeners;
-use Flarum\Frontend\Event\Rendering;
+use Flarum\Event\ConfigureWebApp;
 use Illuminate\Contracts\Events\Dispatcher;
 
 class AddClientAssets
 {
+
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(Rendering::class, [$this, 'addAssets']);
+
+        $events->listen(ConfigureWebApp::class, [$this, 'addAssets']);
 
     }
     /**
      * @param Rendering $app
      */
-    public function addAssets(Rendering $app)
+    public function addAssets(ConfigureWebApp $app)
     {
         if ($app->isForum()) {
+
             $app->addAssets([
                 __DIR__.'/../../js/forum/dist/extension.js'
             ]);
