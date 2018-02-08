@@ -1,0 +1,32 @@
+{
+  "name": "cryptobits/cointicker",
+  "description": "Coin ticker.",
+  "keywords": [
+
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Denni Gottfredsen",
+      "email": "denn@denn.dk",
+      "homepage": "http://denni.dk"
+    }
+  ],
+  "support": {
+
+  },
+  "require": {
+    "flarum/core": "^0.1.0-beta.8"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "cryptobits coin-ticker"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Cryptobits\\CoinTicker\\": "src/"
+    }
+  }
+}
